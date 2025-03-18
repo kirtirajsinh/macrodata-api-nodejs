@@ -91,3 +91,6 @@ app.post('/api/webhook', async function (request, response) {
 app.listen(3000, function () {
     console.log('Running mAcrodata')
 })
+
+module.exports = app;
+
