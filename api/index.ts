@@ -11,13 +11,16 @@ import {
 
 
 const app = express()
+app.use(express.json());
 
 app.get('/', function (req, res) {
     res.send('Hello cool')
 })
 
 app.post('/webhook', async function (request, response) {
-    const requestJson = request.body;
+    console.log("request", request);
+    const requestJson = await request.body;
+    console.log("request json", requestJson);
 
     console.log(requestJson, "request json");
 
@@ -87,7 +90,6 @@ app.post('/webhook', async function (request, response) {
 
     response.status(200).json({ success: true });
 })
-
 app.listen(3000, function () {
     console.log('Running mAcrodata')
 })
