@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/index.ts",
-    "start": "tsc && node dist/src/index.js",
+    "dev": "ts-node api/index.ts",
+    "start": "tsc && node dist/api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
