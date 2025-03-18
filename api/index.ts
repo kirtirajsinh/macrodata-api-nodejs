@@ -16,7 +16,7 @@ app.get('/', function (req, res) {
     res.send('Hello cool')
 })
 
-app.post('/api/webhook', async function (request, response) {
+app.post('/webhook', async function (request, response) {
     const requestJson = request.body;
 
     console.log(requestJson, "request json");
